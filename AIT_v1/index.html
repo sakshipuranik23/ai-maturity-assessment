@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Maturity Assessment Tool</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- SheetJS (Excel) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- Core data & DB — must load before views -->
+  <script src="js/data.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/excel.js"></script>
+
+  <!-- Views -->
+  <script src="js/views/login.js"></script>
+  <script src="js/views/about.js"></script>
+  <script src="js/views/report.js"></script>
+  <script src="js/views/evaluator.js"></script>
+  <script src="js/views/coe.js"></script>
+  <script src="js/views/admin.js"></script>
+
+  <!-- Boot -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      AIT.Views = AIT.Views || {};
+      AIT.Router.init();
+    });
+  </script>
+</body>
+</html>
